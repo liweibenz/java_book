@@ -1,0 +1,47 @@
+{
+  "title": "JavaBook",
+  "author": "blk5",
+  "description": "关于JAVA的一本书",
+  "language": "zh-hans",
+  "theme-default": {
+    "showLevel": true
+  },
+  "plugins": [
+    "theme-comscore",
+    "-lunr",
+    "-search",
+    "search-pro",
+    "-sharing",
+    "sharing-plus",
+    "back-to-top-button",
+    "code",
+    "expandable-chapters",
+    "splitter"
+  ],
+  "pluginsConfig": {
+    "sharing": {
+      "douban": false,
+      "facebook": false,
+      "google": false,
+      "pocket": false,
+      "qq": true,
+      "qzone": false,
+      "twitter": false,
+      "weibo": true,
+      "all": [
+        "douban",
+        "facebook",
+        "google",
+        "instapaper",
+        "linkedin",
+        "twitter",
+        "weibo",
+        "messenger",
+        "qq",
+        "qzone",
+        "viber",
+        "whatsapp"
+      ]
+    }
+  }
+}
