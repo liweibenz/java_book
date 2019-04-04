@@ -7,7 +7,6 @@
     "showLevel": true
   },
   "plugins": [
-    "theme-comscore",
     "-lunr",
     "-search",
     "search-pro",
