@@ -3,9 +3,6 @@
   "author": "blk5",
   "description": "关于JAVA的一本书",
   "language": "zh-hans",
-  "theme-default": {
-    "showLevel": true
-  },
   "plugins": [
     "-lunr",
     "-search",
