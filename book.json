@@ -12,11 +12,9 @@
     "search-pro",
     "-sharing",
     "sharing-plus",
-    "back-to-top-button",
     "code",
     "expandable-chapters",
-    "splitter",
-    "graceful-fs"
+    "splitter"
   ],
   "pluginsConfig": {
     "sharing": {
