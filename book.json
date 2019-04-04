@@ -16,7 +16,8 @@
     "back-to-top-button",
     "code",
     "expandable-chapters",
-    "splitter"
+    "splitter",
+    "graceful-fs"
   ],
   "pluginsConfig": {
     "sharing": {
