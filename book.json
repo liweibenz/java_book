@@ -4,13 +4,11 @@
   "description": "关于JAVA的一本书",
   "language": "zh-hans",
   "plugins": [
-    "-lunr",
-    "-search",
-    "search-pro",
+    "search",
+    "-search-pro",
     "-sharing",
     "sharing-plus",
     "code",
-    "expandable-chapters",
     "splitter"
   ],
   "pluginsConfig": {
