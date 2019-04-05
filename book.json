@@ -17,7 +17,7 @@
   "pluginsConfig": {
     "prism": {
       "css": [
-        "prismjs/themes/prism-duotone-dark.css"
+        "prismjs/themes/prism-hopscotch.css"
       ]
     },
     "sharing": {
