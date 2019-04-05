@@ -17,7 +17,7 @@
   "pluginsConfig": {
     "prism": {
       "css": [
-        "prismjs/themes/prism-solarizedlight.css"
+        "prismjs/themes/prism-atom-dark.css"
       ]
     },
     "sharing": {
