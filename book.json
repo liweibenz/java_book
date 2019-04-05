@@ -1,15 +1,15 @@
 {
-  "title": "JavaBook",
-  "author": "blk5",
+  "title": "BLK5 JavaBook",
+  "author": "BLK5",
   "description": "关于JAVA的一本书",
   "language": "zh-hans",
   "plugins": [
-    "search",
+    "-search",
     "-search-pro",
     "-sharing",
     "sharing-plus",
-    "code",
-    "splitter"
+    "-code",
+    "-splitter"
   ],
   "pluginsConfig": {
     "sharing": {
