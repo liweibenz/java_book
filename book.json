@@ -5,13 +5,21 @@
   "language": "zh-hans",
   "plugins": [
     "-search",
-    "-search-pro",
+    "search-pro",
     "-sharing",
     "sharing-plus",
     "-code",
-    "-splitter"
+    "-splitter",
+    "-highlight",
+    "prism",
+    "prism-themes"
   ],
   "pluginsConfig": {
+    "prism": {
+      "css": [
+        "prismjs/themes/prism-solarizedlight.css"
+      ]
+    },
     "sharing": {
       "douban": false,
       "facebook": false,
