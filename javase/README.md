@@ -25,14 +25,10 @@ package com.test;
 
 public class Day03_1 {
     public static void main(String[] args) {
-
-
-        int n  =50;
+        int n = 50;
         for (int i = 2; i < n ; i++) {
         }
         System.out.println(Math.sqrt(37));
-
-
     }
 }
 
