@@ -1,4 +1,4 @@
 #!/bin/bash
-cd /data/bookroot/java_book/
+cd /data/book/java_book/
 git pull
 gitbook build
