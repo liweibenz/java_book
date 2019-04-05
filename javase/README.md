@@ -20,7 +20,7 @@
 
 
 
-```
+```java
 package com.test;
 
 public class Day03_1 {
