@@ -7,7 +7,8 @@
 * [Java 运算符](javase/operator.md)
 * [Java 流程控制](javase/if.md)
 * [Java 循环控制](javase/for.md)
-* [Java 数组](javase/arrey.md)
+* [Java 数组](javase/array.md)
+
 
 ### JAVA面向对象
 * [Java 类](object/class.md)
