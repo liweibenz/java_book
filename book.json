@@ -12,7 +12,8 @@
     "-splitter",
     "-highlight",
     "prism",
-    "prism-themes"
+    "prism-themes",
+    "rust-playpen"
   ],
   "pluginsConfig": {
     "prism": {
