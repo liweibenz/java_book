@@ -9,12 +9,10 @@
 * [Java 循环控制](javase/for.md)
 * [Java 数组](javase/array.md)
 
+### JAVA_EE
 
-### JAVA面向对象
-* [Java 类](object/class.md)
-* [Java 对象](object/object.md)
-* [Java 方法](object/method.md)
-* [Java 修饰符](object/modifier.md)
+
+### [JAVA面向对象](object/object.md)
 
 
 
