@@ -16,7 +16,9 @@
 ## 2. Date 日期计算（大部分方法已放弃）
 
 
-new Date() 获取当前时间
+
+
+
 new Date() 获取当前时间
 
 
@@ -32,6 +34,13 @@ new Date() 获取当前时间
 分：mm
 秒：ss
 
+
+* 将date类型转换成字符 format方法
+
+* 将字符串转date类型 parse方法
+
+
+
 * 格式化日期 format方法
 ```java
         Date date = new Date();
@@ -42,7 +51,7 @@ new Date() 获取当前时间
 
 * 将字符串转成日期格式：parse方法
 ```java
-      Date date = new Date();
+        Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         System.out.println(sdf.format(date));
 
