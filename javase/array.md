@@ -229,6 +229,76 @@ System.out.println(Arrays.toString(arr));
 
 #### 7. 数组复制
 
+三种方式：
+1. System.arraycopy();
+* 第一个参数：源数组
+* 第二个参数：复制开始的位置
+* 第三个参数：目标数组
+* 第四个参数：复制开始的位置
+* 第五个参数：复制长度
+
+```java
+int[] arr = {3,4,5,6,7,8,3,2,2};
+int[] rra = new int[6];
+System.arraycopy(arr,0,rra,0,5);
+System.out.println(Arrays.toString(rra));
+```
+
+
+2. Arrays.copyOf()
+
+如果下表越界，不会报错，使用默认值进行填充
+
+
+返回值：就是复制的数组
+```java
+int[] arr = {3,4,5,6,7,8,3,2,2};
+int[] rra = Arrays.copyOf(arr,3);
+System.out.println(Arrays.toString(rra));
+
+//返回：
+[3, 4, 5]
+```
+
+3. 数组对象.clone()
+
+直接克隆一个数组
+
+```java
+int[] arr = {3,4,5,6,7,8,3,2,2};
+int[] rra = arr.clone();
+System.out.println(Arrays.toString(rra));
+
+```
+
+    三种数组复制的共同点都属于浅拷贝
+    
+    浅拷贝：只对当前的数组对象进行拷贝            
+           基本类型的 数据：在堆中复制一个新“数组”对象。新对象中的基本类型相当于复制过来一份。
+		   引用类型的数据： 在堆中复制一个新“数组”对象。但是只复制 这一层对象。
+		   只拷贝第一层拷贝
+	一般深拷贝：
+	
+	
+	彻底深拷贝：彻底深拷贝是在成功 clone 个对象之后，此对象与母对象在任何引用路径上都不存在共享的实例对象，
+	           但是引用路径递归越深，则越接近JVM底层对象，且发现彻底深拷贝实现难度越大
+	           
+	           
+	           若想实现深拷贝，需要重写clone对象
+	           
+	           
+	           	   
+		 
+		 
+		   
+		   
+		   
+		   
+		   
+		   
+
+    
+
 
 
 
