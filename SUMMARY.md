@@ -21,7 +21,7 @@
 
 
 ## [JAVA 实例]
-   * [日期处理实例](javaexample/date.md)
+* [日期处理实例](javaexample/date.md)
 
 
 
