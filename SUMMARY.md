@@ -20,11 +20,11 @@
 
 
 
-- # JAVA 实例
-* [日期处理实例](javaexample/date.md)
+# JAVA 实例
+- [日期处理实例](javaexample/date.md)
 
 
-- # HOMEWORK
-* [day03](homework/day03.md)
+# HOMEWORK
+- [day03](homework/day03.md)
 
 
