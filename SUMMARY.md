@@ -1,6 +1,6 @@
 # [目录](README.md)
  
-### JAVA_SE
+## JAVA_SE
 * [Java 简介](javase/README.md)
 * [Java 变量](javase/variable.md)
 * [Java 数据类型](javase/datatype.md)
@@ -9,7 +9,7 @@
 * [Java 循环控制](javase/for.md)
 * [Java 数组](javase/array.md)
 
-### [JAVA面向对象](object/object.md)
+## [JAVA面向对象](object/object.md)
 * [Java 类和类的关系](javase/class.md)
 * [Java 修饰符](javase/modifier.md)
 * [Java 抽象类](javase/abstract.md)
@@ -20,11 +20,10 @@
 
 
 
-### [JAVA 实例]
-1. [日期处理实例](javaexample/date.md)
+## [JAVA 实例]
+   * [日期处理实例](javaexample/date.md)
 
 
 
-
-### HOMEWORK
+## HOMEWORK
 * [day03](homework/day03.md)
