@@ -6,7 +6,7 @@
 3. 错误，出现在编译期
 
 什么是受检异常？
-
+编译期检查不到可能存在的错误，如果运行错误会影响程序运行
 
 
 
@@ -27,7 +27,7 @@
 7. FileNotFoundException 文件找不到异常
 
 
-## 3. 异常的处理
+3. 异常的处理
 
 * 当异常产生的时候，程序会在异常产生的位置，创建一个关于异常类型的对象，
     对象包含了异常信息，异常堆栈
@@ -76,14 +76,26 @@
    
    
 
-3. 抛出异常
+## 3. 抛出异常
 * 在某个条件符合的时候，使用throw new创建异常对象--抛出异常
 * 如果主动抛出异常是在方法中，在方法定义的尾部thr\关键字，异常类型，
     要求调用方法的人必须抛出这种异常
     
 【使用】
 1. 可以在catch中使用,不掩盖函数定义时异常的出现
+```java
+	public static void test(){
+		try{
+			int i =1/0;
+		}catch(ArithmeticException e){
+			System.out.println("ArithmeticException");
+			// 异常设置
+			throw new ArithmeticException();
+		}
+	}
 
+
+```
 
 2. 直接使用throw中使用
 

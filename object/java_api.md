@@ -37,7 +37,7 @@ new Date() 获取当前时间
 
 * 将date类型转换成字符 format方法
 
-* 将字符串转date类型 parse方法
+* 将字符串转date类型 parse方法(必须用try 捕获异常)
 
 
 
