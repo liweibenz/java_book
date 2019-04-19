@@ -36,6 +36,8 @@
 作用：到常量池检查是否存在某个字符串，如果存在就返回常量池中的对象，如果不存在就创建一个字符串，返回常量池中的字符串
 
 
+常量+常量 = 放常量池
+常量 + 变量 = 不放常量池
 
 ## 三、字符串相关方法
 
@@ -48,7 +50,7 @@
 * 一个类实现了comparable接口的compareTo方法，就可以是用Array.sort方法进行排序
 * 也可以在sort方法中，创建comparator的实现类
 
-comparable 是一个比较器
+### comparable 是一个接口，
 
 
 ## 四、StringBuffer和StringBuilder
@@ -82,7 +84,7 @@ comparable 是一个比较器
 
 > 什么是不可变数据？
 > 
-> 
+> 就是定义一个对象，不能修改，如果修改了，就会在产生一个对象
 
 
         long start = System.nanoTime();

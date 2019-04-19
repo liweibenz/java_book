@@ -7,11 +7,18 @@
 > 什么时候定义泛型类？
 > 
 > 当类中要操作的引用数据类型不确定的时候,适合定义泛型类型
+
+
+原生类型：1.5以前用object解决
+泛型类型：1.5以后出现的    
+    
     
 * 作用：
     1. 创建对象的时候声明泛型，    
     2. 方法定义的时候，声明形式参数
     3. 【本质】将所操作的数据类型指定一个参数类型，也被称为：参数化类型
+    * 解决了元素安全的问题
+    * 解决了元素取出，不需要强制转换的问题
     
 * 使用范围：
     1. 接口
@@ -33,25 +40,16 @@ ArrayList实现类
 * add 添加元素
 * get 获取元素    
 
-缺点：
-1. 不安全,可以随意放入元素，但不允许随意取出
-2. 
+
 
 
 * 语法：
 ```java
-    //泛型定义在接口上
-    
+    //泛型定义在接口上   
 interface Inter<T>
 {
     void show(T t);
 }
-
-
-
-
-
-
 ```    
 
 对于泛型来说，在使用的时候，如果没有提供<> 叫原生泛型
@@ -61,6 +59,127 @@ interface Inter<T>
     * 原生类型直接赋予泛型类型，不可以
     * 泛型类型赋予原生类型，可以
     
+### 应用
+1. 创建对象的 容器类
+2. 充当形式参数
+
+一、泛类型应用
+
+```java
+
+package cn.blk5.Day12;
+
+// 1.	定义一个泛型类盒子Box<T>,属性width和height, 调用验证可支持Integer,Double,String等等类型。（也就是能够放入到box中的内容都必须是指定的类型）
+
+/**
+ *
+ * @author: LIWEI
+ * @updateTime: 2019-04-19 08:43
+ * @version: 1.0
+ * @description: 泛型类 测试
+ *
+ */
+
+class Box<T>{
+
+    private T width;
+    private T height;
+
+    public T getWidth() {
+        return width;
+    }
+
+    public void setWidth(T width) {
+        this.width = width;
+    }
+
+    public T getHeight() {
+        return height;
+    }
+
+    public void setHeight(T height) {
+        this.height = height;
+    }
+}
+
+public class Day12_class {
+
+
+
+    public static void main(String[] args) {
+
+        // 创建一个box对象
+        Box box = new Box();
+        // 创建一个Interger对象
+        Box<Integer> aa = new Box<Integer>();
+        Box<String> bb = new Box();
+        box.setHeight("88888");
+        box.setWidth(9999);
+
+        aa.setHeight(5555);
+        bb.setHeight("44");
+        System.out.println(aa.getHeight());
+        System.out.println(bb.getHeight());
+        
+        System.out.println("高度："+box.getHeight()+ "宽度："+box.getWidth());
+        
+    }
+}
+
+```
+
+二、泛方法
+```java
+package cn.blk5.Day12;
+/**
+ *
+ * @author: LIWEI
+ * @updateTime: 2019-04-19 09:02
+ * @version: 1.0
+ * @description:  非泛型类中定义泛型方法
+ *
+ */
+public class Day12_method {
+
+    // 泛型方法，在返回类型前面使用泛型字母
+    public static <T>  void test1(T t){
+        // 传入任何基本类型的数据都可以输出
+        System.out.println(t);
+    }
+
+    public static void main(String[] args) {
+
+        test1("asdfasdfasfd");
+        test1(4.345);
+        test1(false);
+        test1(55534.34534534F);
+
+    }
+}
+```
+
+三、泛接口
+```java
+
+
+
+
+
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
     
 ### 自定义泛型
 
