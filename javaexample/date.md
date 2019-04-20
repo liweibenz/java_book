@@ -13,17 +13,16 @@
 
 
 * Instant——代表的是时间戳 时间戳就是计算机读的时间，它是以Unix元年(传统 的设定为UTC时区1970年1月1日午夜时分)开始算起的。
-
 * LocalDate -- 不包含具体时间的日期
 * LocalTime -- 它代表的是不含日期的时间
 * LocalDateTime -- 它包含了日期及时间，不过还是没有偏移信息或者说时区。
 * ZoneId -- 时区信息
 * ZonedDate -- 包含时区的日期
 * ZonedTime -- 包含时区的时间
-* ZonedDateTime——这是一个包含时区的完整的日期时间，偏移量是以UTC/格林威治时间为基准的。    
-* Duration 用于计算两个"时间"间隔 主要用于以秒和纳秒衡量时间的长短
-* Period   用于计算两个"日期"间隔 以年、月或者日的方式对多个时间单位建模   
-* DateTimeFormatter  格式化日期
+* ZonedDateTime -- 这是一个包含时区的完整的日期时间，偏移量是以UTC/格林威治时间为基准的。    
+* Duration -- 用于计算两个"时间"间隔 主要用于以秒和纳秒衡量时间的长短
+* Period -- 用于计算两个"日期"间隔 以年、月或者日的方式对多个时间单位建模   
+* DateTimeFormatter -- 格式化日期
 
 https://cloud.tencent.com/developer/article/1350262
 https://cloud.tencent.com/developer/article/1379447
@@ -155,7 +154,96 @@ System.out.println(d11+"与"+d12+"相差："+d11.until(d12,ChronoUnit.SECONDS)+"
 
 ## 6. 就是两个时间差多少时分秒
 
+```java
+// 当前时间
+LocalTime t1 = LocalTime.now();
+// 设定一个时间
+LocalTime t2 = LocalTime.of(23,55,30);
 
+// 获取两个时间差，返回时分秒
+Duration du = Duration.between(t1,t2);
+System.out.println(du);
+
+// 获取两个时间相差多少秒
+System.out.println(t2.toSecondOfDay() - t1.toSecondOfDay()+"秒");
+// 获取两个时间相差多少纳秒
+System.out.println(t2.toNanoOfDay() - t1.toNanoOfDay() + "纳秒");
+System.out.println(t1.until(t2,ChronoUnit.HOURS)+ "时");
+System.out.println(t1.until(t2,ChronoUnit.MINUTES)+"分");
+System.out.println(t1.until(t2,ChronoUnit.SECONDS)+"秒");
+System.out.println(t1.until(t2,ChronoUnit.MILLIS)+"毫秒");
+System.out.println(t1.until(t2,ChronoUnit.NANOS)+"纳秒");
+```
+输出结果：
+```java
+PT12H46M39.265S
+46000秒
+45999265000000纳秒
+12时
+766分
+45999秒
+45999265毫秒
+45999265000000纳秒
+```
+
+
+## 7. 日期，时间，周，加减运算
+```java
+/**
+ * 增加日期时间：plus
+ * 减少日期时间：minus
+ * 设置日期时间：with
+ * 这些用法都类似，plusYears,minusYears,withYear 
+ */
+
+//String dateTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+LocalDateTime dateTime = LocalDateTime.of(2018,05,05,11,11,11);
+System.out.println("原始时间："+dateTime);
+
+// plusYears(x) 加x年
+System.out.println("增加1年："+dateTime.plusYears(1));
+
+// plusMonths(x) 加x月
+System.out.println("增加1月："+dateTime.plusMonths(1));
+
+// plusYears(x) 加x日
+System.out.println("增加100天："+dateTime.plusDays(100));
+
+// plusWeeks(x) 增加x周
+System.out.println("增加10周"+ dateTime.plusWeeks(10));
+
+// plusHours(x) 加x时
+System.out.println("增加5小时："+dateTime.plusHours(5));
+
+// plusMinutes(x) 加x分
+System.out.println("增加20分钟："+dateTime.plusMinutes(20));
+
+// plusSeconds(x) 加x秒
+System.out.println("增加30秒："+dateTime.plusSeconds(30));
+
+// minus 时间做减法运算
+// minusYears(x)  减x年
+System.out.println("减3年："+dateTime.minusYears(3));
+
+//minusHours(x)   减10小时
+System.out.println(dateTime.minusHours(10));
+
+// minusWeeks(5) 减5周
+System.out.println("向前5周："+dateTime.minusWeeks(5));
+
+
+// with 将当前日期修改成 xxxx年xx月xx日 x时x分x秒
+// withMonth 将当期日期中的月份修改成9月
+System.out.println(dateTime.withMonth(9));
+
+// withMonth 将当期日期中的日修改成20日
+System.out.println(dateTime.withDayOfMonth(20));
+
+// 两个日期比较，返回true/false
+System.out.println(dateTime.equals(LocalDateTime.now()));
+
+
+```
 
 
 
@@ -242,6 +330,13 @@ America/Rainy_River
 ``` 
   
 ## 3. 设置时区
+
+```java
+// 设置时区为：美国/加拉加斯
+ZoneId zoneId = ZoneId.of("America/Caracas");
+LocalDateTime dateTime1 = LocalDateTime.now(zoneId);
+System.out.println(dateTime1);
+```
 
 
 
