@@ -13,8 +13,8 @@
 
 
 * Instant——代表的是时间戳 时间戳就是计算机读的时间，它是以Unix元年(传统 的设定为UTC时区1970年1月1日午夜时分)开始算起的。
-* LocalDate -- 不包含具体时间的日期
-* LocalTime -- 它代表的是不含日期的时间
+* LocalDate -- 日期。不包含时间
+* LocalTime -- 时间，不包含日期
 * LocalDateTime -- 它包含了日期及时间，不过还是没有偏移信息或者说时区。
 * ZoneId -- 时区信息
 * ZonedDate -- 包含时区的日期
@@ -339,4 +339,46 @@ System.out.println(dateTime1);
 ```
 
 
+# Instant 时间戳操作
+
+
+```java
+
+// 获取当前时间戳，与北京时间差8小时
+Instant aa = Instant.now();
+
+
+// Instant获取当前时间，long类型的10位秒数、13位毫秒数
+Instant now = Instant.now().plusMillis(TimeUnit.HOURS.toMillis(8));
+System.out.println("秒数:"+now.getEpochSecond());
+System.out.println("毫秒数:"+now.toEpochMilli());
+
+
+// 将long类型的timestamp转为LocalDateTime
+// 直接转换
+long timestamp = 1556082515465L;
+System.out.println(Instant.ofEpochMilli(timestamp));
+
+
+// 转为LocalDateTime
+Instant instant = Instant.ofEpochMilli(timestamp);
+// 获取系统时区(如果业务不跨区域，以下可以不加)
+ZoneId zone = ZoneId.systemDefault();
+// 转换时间
+LocalDateTime localDateTime = LocalDateTime.ofInstant(instant, zone);
+System.out.println(localDateTime);
+
+
+
+
+
+// 获取当前时间戳 1556084410679
+long  cc = LocalDateTime.now().toInstant(ZoneOffset.ofHours(8)).toEpochMilli();
+System.out.println(cc);
+
+// 将时间戳转换为时间2019-04-24T05:40:10.679Z
+Instant dd = Instant.ofEpochMilli(cc);
+System.out.println(dd);
+
+```
 
