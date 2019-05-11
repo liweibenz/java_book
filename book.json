@@ -43,6 +43,10 @@
         "qq",
         "qzone"
       ]
+    },
+    "github": {
+      "url": "https://github.com/liweibenz/java_book"
+
     }
   }
 }
