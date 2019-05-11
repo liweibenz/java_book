@@ -9,6 +9,7 @@
 * [Java 流程控制](javase/if.md)
 * [Java 循环控制](javase/for.md)
 * [Java 数组](javase/array.md)
+* [Java 构造器](javase/constructor.md)
 
 # [JAVA面向对象](object/object.md)
 * [Java 类和类的关系](javase/class.md)
