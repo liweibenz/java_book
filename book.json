@@ -5,7 +5,6 @@
   "language": "zh-hans",
   "plugins": [
     "github",
-    "editlink",
     "-search",
     "search-pro",
     "-sharing",
