@@ -8,39 +8,16 @@
     "-search",
     "search-pro",
     "-sharing",
-    "sharing-plus",
     "-code",
     "-splitter",
     "-highlight",
     "prism",
-    "prism-themes",
-    "rust-playpen"
+    "prism-themes"
   ],
   "pluginsConfig": {
     "prism": {
       "css": [
         "prismjs/themes/prism-atom-dark.css"
-      ]
-    },
-    "sharing": {
-      "douban": false,
-      "facebook": false,
-      "google": false,
-      "pocket": false,
-      "qq": true,
-      "qzone": false,
-      "twitter": false,
-      "weibo": true,
-      "all": [
-        "douban",
-        "facebook",
-        "google",
-        "instapaper",
-        "linkedin",
-        "twitter",
-        "weibo",
-        "qq",
-        "qzone"
       ]
     },
     "github": {
