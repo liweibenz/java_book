@@ -4,6 +4,8 @@
   "description": "关于JAVA的一本书",
   "language": "zh-hans",
   "plugins": [
+    "github",
+    "editlink",
     "-search",
     "search-pro",
     "-sharing",
@@ -38,7 +40,6 @@
         "linkedin",
         "twitter",
         "weibo",
-        "messenger",
         "qq",
         "qzone"
       ]
